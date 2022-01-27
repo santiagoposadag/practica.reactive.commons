@@ -11,7 +11,6 @@ public class Controller {
     public Mono<Void> handler(MessageToBotmaker messageToBotmaker){
 
         System.out.println(messageToBotmaker.toString());
-        reactiveEventsGateway.emit(messageToBotmaker);
-        return Mono.empty();
+        return reactiveEventsGateway.emit(messageToBotmaker);
     }
 }

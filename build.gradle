@@ -19,14 +19,16 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'io.projectreactor:reactor-test'
-	implementation 'org.reactivecommons:async-commons-api:0.4.7'
-	implementation 'org.reactivecommons:async-commons-starter:0.4.7'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:2.6.2'
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.2'
+	testImplementation 'io.projectreactor:reactor-test:3.4.14'
+	implementation 'org.reactivecommons:async-commons-api:1.0.2'
+	implementation 'org.reactivecommons:async-commons-starter:0.6.2'
 	implementation 'org.reactivecommons.utils:object-mapper:0.1.0'
+	implementation group: 'org.reactivecommons', name: 'async-commons-starter', version: '0.6.2'
+	implementation group: 'com.rabbitmq', name: 'amqp-client', version: '5.14.1'
 }
 
 test {
